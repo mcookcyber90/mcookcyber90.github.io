@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Mia Cook's interactive cybersecurity portfolio featuring SOC investigations, technical case studies, and hands-on security projects.">
+  <meta name="description" content="Mia Cook's interactive cybersecurity portfolio featuring security operations, threat detection, technical case studies, and hands-on security projects.">
   <meta name="theme-color" content="#050a0d">
   <title>Mia Cook | Cipher Division</title>
   <link rel="stylesheet" href="styles.css">
@@ -23,6 +23,7 @@
 
     <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
       <a href="#dashboard" data-classified="Dashboard" data-recruiter="About">Dashboard</a>
+      <a href="#dossier" data-classified="Agent Dossier" data-recruiter="Focus">Agent Dossier</a>
       <a href="#missions" data-classified="Missions" data-recruiter="Projects">Missions</a>
       <a href="#gadgets" data-classified="Field Gadgets" data-recruiter="Skills & Tools">Field Gadgets</a>
       <a href="#credentials">Credentials</a>
@@ -51,11 +52,13 @@
       <section class="hero-copy">
         <p class="eyebrow" data-classified="Agent profile // verified" data-recruiter="Professional profile">Agent profile // verified</p>
         <h1 id="hero-title">Mia Cook</h1>
-        <p class="alias" data-classified="Agent MC" data-recruiter="Aspiring SOC Analyst">Agent MC</p>
+        <p class="alias" data-classified="Codename: R.I.O.T." data-recruiter="Security Operations Focus">Codename: R.I.O.T.</p>
+        <p class="riot-expansion classified-only">Reconnaissance · Intelligence · Operations · Triage</p>
         <p class="role">Security+ Certified · Cyber Threat Hunting · Future Purple Teamer</p>
-        <p class="hero-summary" data-classified="Every alert is a clue. Every investigation is a mission." data-recruiter="Security+ certified cybersecurity professional building hands-on experience in threat detection, vulnerability management, network analysis, and incident response.">Every alert is a clue. Every investigation is a mission.</p>
+        <p class="hero-summary" data-classified="Every alert is a clue. Every investigation is a mission." data-recruiter="Current technical focus: security operations, threat detection, network analysis, vulnerability management, and incident response.">Every alert is a clue. Every investigation is a mission.</p>
         <div class="hero-actions">
           <a class="button primary" href="#missions" data-classified="Access mission files" data-recruiter="View technical projects">Access mission files</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/nia-cook95" target="_blank" rel="noreferrer">LinkedIn</a>
           <a class="button secondary disabled-link" href="#" aria-disabled="true" data-classified="Resume pending" data-recruiter="Resume coming soon">Resume pending</a>
         </div>
         <div class="signal" aria-label="System status">
@@ -70,6 +73,7 @@
           <small>LIVE MAP</small>
         </div>
         <div class="globe-wrap">
+          <img class="earth-texture" src="assets/cyber-earth.png" alt="" aria-hidden="true">
           <canvas id="cyber-globe" aria-hidden="true"></canvas>
           <button class="map-node node-one" type="button" data-focus="network"><span></span><b data-classified="Signal Trace" data-recruiter="Network Analysis">Signal Trace</b></button>
           <button class="map-node node-two" type="button" data-focus="vulnerability"><span></span><b data-classified="Fortress" data-recruiter="Vulnerability Management">Fortress</b></button>
@@ -101,6 +105,40 @@
       </aside>
     </section>
 
+    <section id="dossier" class="section shell dossier-section" aria-labelledby="dossier-title">
+      <article class="dossier-story panel classified-only">
+        <div class="dossier-image">
+          <img src="assets/riot-command-center.png" alt="Mia Cook seated in a cinematic cybersecurity command center">
+          <span class="dossier-stamp">CLASSIFIED // R.I.O.T. PROTOCOL</span>
+        </div>
+        <div class="dossier-copy">
+          <p class="eyebrow">Origin file // Authorized personnel only</p>
+          <h2 id="dossier-title">The R.I.O.T. Protocol</h2>
+          <p class="dossier-lead">When ordinary signals disappear into noise, R.I.O.T. follows the evidence.</p>
+          <p>R.I.O.T.—Reconnaissance, Intelligence, Operations, and Triage—is a developing cyber operative profile built around curiosity, disciplined investigation, and continuous learning. Each lab becomes a mission file. Each finding becomes intelligence. Each credential raises clearance.</p>
+          <div class="briefing-grid">
+            <div><small>Current assignment</small><b>Security Operations</b></div>
+            <div><small>Primary discipline</small><b>Threat Detection</b></div>
+            <div><small>Long-range objective</small><b>Purple Team Operations</b></div>
+          </div>
+          <a class="button primary" href="#missions">Open mission archive</a>
+        </div>
+      </article>
+
+      <article class="recruiter-about panel recruiter-only">
+        <div>
+          <p class="eyebrow">Professional focus</p>
+          <h2>Security operations through hands-on practice</h2>
+        </div>
+        <p>Mia Cook is a Security+ certified cybersecurity professional focused on developing practical capability in security operations, threat detection, network analysis, vulnerability management, and incident response. This portfolio documents that growth through technical projects, repeatable investigation workflows, and clear written findings.</p>
+        <div class="briefing-grid">
+          <div><small>Current area of study</small><b>SOC Analysis</b></div>
+          <div><small>Evidence</small><b>Labs & Case Studies</b></div>
+          <div><small>Career direction</small><b>Purple Teaming</b></div>
+        </div>
+      </article>
+    </section>
+
     <section id="missions" class="section shell" aria-labelledby="missions-title">
       <div class="section-heading">
         <div>
@@ -121,12 +159,12 @@
           </div>
         </div>
         <div class="tool-grid">
-          <article><span>◉</span><b data-classified="Packet Interceptor" data-recruiter="Wireshark">Packet Interceptor</b><small>Wireshark</small></article>
-          <article><span>⌁</span><b data-classified="Recon Scanner" data-recruiter="Nmap">Recon Scanner</b><small>Nmap</small></article>
-          <article><span>⬡</span><b data-classified="Vulnerability Detector" data-recruiter="Greenbone / OpenVAS">Vulnerability Detector</b><small>Greenbone</small></article>
-          <article><span>&gt;_</span><b data-classified="Field Operations System" data-recruiter="Kali Linux">Field Operations System</b><small>Kali Linux</small></article>
-          <article><span>⌖</span><b data-classified="Tactics Database" data-recruiter="MITRE ATT&CK">Tactics Database</b><small>MITRE ATT&CK</small></article>
-          <article><span>▤</span><b data-classified="Intelligence Console" data-recruiter="Splunk">Intelligence Console</b><small>Splunk</small></article>
+          <article><div class="gadget-visual gadget-one" role="img" aria-label="Compact packet interception device"></div><b data-classified="Packet Interceptor" data-recruiter="Wireshark">Packet Interceptor</b><small>Wireshark · Packet analysis</small></article>
+          <article><div class="gadget-visual gadget-two" role="img" aria-label="Portable network reconnaissance scanner"></div><b data-classified="Recon Scanner" data-recruiter="Nmap">Recon Scanner</b><small>Nmap · Network discovery</small></article>
+          <article><div class="gadget-visual gadget-three" role="img" aria-label="Rugged vulnerability detection module"></div><b data-classified="Vulnerability Detector" data-recruiter="Greenbone / OpenVAS">Vulnerability Detector</b><small>Greenbone · Vulnerability assessment</small></article>
+          <article><div class="gadget-visual gadget-four" role="img" aria-label="Black field operations laptop"></div><b data-classified="Field Operations System" data-recruiter="Kali Linux">Field Operations System</b><small>Kali Linux · Security lab</small></article>
+          <article><div class="gadget-visual gadget-five" role="img" aria-label="Encrypted threat tactics database device"></div><b data-classified="Tactics Database" data-recruiter="MITRE ATT&CK">Tactics Database</b><small>MITRE ATT&CK · Technique mapping</small></article>
+          <article><div class="gadget-visual gadget-six" role="img" aria-label="Handheld intelligence analysis console"></div><b data-classified="Intelligence Console" data-recruiter="Splunk">Intelligence Console</b><small>Splunk · Log investigation</small></article>
         </div>
       </div>
 
@@ -164,10 +202,10 @@
       <div>
         <p class="eyebrow" data-classified="Open channel" data-recruiter="Contact">Open channel</p>
         <h2>Let’s connect</h2>
-        <p>Add your professional email and LinkedIn address before publishing this section.</p>
+        <p data-classified="Secure channel established. Review professional credentials and mission evidence." data-recruiter="Connect with Mia on LinkedIn to discuss cybersecurity opportunities and her developing project work.">Secure channel established. Review professional credentials and mission evidence.</p>
       </div>
       <div class="hero-actions">
-        <a class="button secondary disabled-link" href="#" aria-disabled="true">LinkedIn placeholder</a>
+        <a class="button primary" href="https://www.linkedin.com/in/nia-cook95" target="_blank" rel="noreferrer">LinkedIn profile</a>
         <a class="button secondary disabled-link" href="#" aria-disabled="true">Email placeholder</a>
       </div>
     </section>

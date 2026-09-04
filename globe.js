@@ -102,7 +102,7 @@
     const glow=context.createRadialGradient(width/2,height/2,radius*.2,width/2,height/2,radius*1.2);
     glow.addColorStop(0,"rgba(19,99,139,.16)"); glow.addColorStop(.72,"rgba(5,45,66,.18)"); glow.addColorStop(1,"rgba(0,0,0,0)");
     context.fillStyle=glow; context.beginPath(); context.arc(width/2,height/2,radius*1.25,0,Math.PI*2); context.fill();
-    context.beginPath(); context.arc(width/2,height/2,radius,0,Math.PI*2); context.fillStyle="rgba(4,23,34,.72)"; context.fill(); context.strokeStyle="rgba(78,201,245,.7)"; context.lineWidth=1.5; context.shadowColor="#43bde8"; context.shadowBlur=18; context.stroke(); context.shadowBlur=0;
+    context.beginPath(); context.arc(width/2,height/2,radius,0,Math.PI*2); context.fillStyle="rgba(4,23,34,.08)"; context.fill(); context.strokeStyle="rgba(78,201,245,.72)"; context.lineWidth=1.5; context.shadowColor="#43bde8"; context.shadowBlur=18; context.stroke(); context.shadowBlur=0;
     context.save(); context.beginPath(); context.arc(width/2,height/2,radius,0,Math.PI*2); context.clip(); drawGrid(); context.restore();
     const phase=(time/45)%22;
     drawRoute([35,-78],[48,2],"rgba(141,221,86,.9)",phase);

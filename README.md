@@ -5,9 +5,11 @@ An interactive cybersecurity portfolio for Mia Cook, built for GitHub Pages with
 ## Included
 
 - Animated cyber globe and clickable operation nodes
+- Recognizable high-detail Earth beneath the animated intelligence overlay
 - Classified Mode and Recruiter Mode
+- R.I.O.T. agent identity and a Classified-only cinematic origin dossier
 - Data-driven mission dossiers
-- Technical gadget/tool showcase
+- Six-image technical gadget/tool showcase
 - Credentials and education section
 - Searchable cybersecurity vocabulary vault
 - Owner Tools forms for drafting missions and vocabulary
@@ -19,14 +21,14 @@ An interactive cybersecurity portfolio for Mia Cook, built for GitHub Pages with
 1. Unzip the package.
 2. Copy everything inside the `cipher-division-portfolio` folder into the root of your `mcookcyber90.github.io` repository.
 3. In GitHub Desktop, confirm the new and changed files.
-4. Use the commit summary `Build Cipher Division portfolio dashboard`.
+4. Use the commit summary `Upgrade Cipher Division to R.I.O.T. Protocol`.
 5. Select **Commit to main**.
 6. Select **Push origin**.
 7. Wait a few minutes and refresh `https://mcookcyber90.github.io`.
 
 ## Add your links
 
-Open `index.html` in VS Code and search for `placeholder`. Replace the disabled résumé, LinkedIn, and email links only after you have the correct public URLs.
+The LinkedIn buttons currently point to `https://www.linkedin.com/in/nia-cook95`. Click-test that address after publishing. Open `index.html` in VS Code and search for `placeholder` when you are ready to add the résumé and email URLs.
 
 ## Publish a new mission without redesigning the site
 
@@ -74,3 +76,11 @@ Because the dashboard loads JSON files, opening `index.html` directly may block 
 - `reports/` — public PDF reports
 
 The visual layout code is in `index.html`, `styles.css`, `app.js`, and `globe.js`.
+
+## What this upgrade changes
+
+- `Agent MC` becomes `Codename: R.I.O.T.` in Classified Mode.
+- Recruiter Mode uses `Security Operations Focus` and avoids calling Mia an aspiring analyst.
+- The acronym means Reconnaissance, Intelligence, Operations, and Triage.
+- The new Agent Dossier is immersive in Classified Mode and becomes a concise professional-focus section in Recruiter Mode.
+- The Earth, command-center scene, and gadget renders are local files, so they do not depend on outside image hosts.
