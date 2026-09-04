@@ -28,7 +28,7 @@ An interactive cybersecurity portfolio for Mia Cook, built for GitHub Pages with
 
 ## Add your links
 
-The LinkedIn buttons currently point to `https://www.linkedin.com/in/nia-cook95`. Click-test that address after publishing. Open `index.html` in VS Code and search for `placeholder` when you are ready to add the résumé and email URLs.
+The LinkedIn buttons point to `https://www.linkedin.com/in/mia-cook95`, and the email button opens a message to `mia.mjc90@mail.com`. The site states that Mia's résumé is available upon request rather than publishing the résumé publicly.
 
 ## Publish a new mission without redesigning the site
 

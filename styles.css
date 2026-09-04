@@ -202,6 +202,8 @@ h1 { margin: 0; font-family: Georgia, serif; font-size: clamp(3.2rem, 5vw, 5.8re
 .button.primary { color: var(--ink); background: var(--gold-bright); }
 .button.primary:hover, .button.primary:focus-visible { background: #ffe09b; }
 .disabled-link { opacity: .62; cursor: not-allowed; }
+.resume-note { cursor: default; opacity: .82; }
+.resume-note:hover { color: var(--gold-bright); background: rgba(8,14,18,.7); box-shadow: none; }
 .signal { display: flex; align-items: center; gap: 1rem; margin-top: 1.6rem; color: var(--green); font: .72rem Consolas, monospace; }
 .signal-bars { display: flex; align-items: end; gap: 3px; height: 18px; }
 .signal-bars i { width: 3px; background: var(--green); animation: bars 1.1s ease-in-out infinite alternate; }
