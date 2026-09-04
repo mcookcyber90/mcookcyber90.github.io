@@ -1,0 +1,44 @@
+[
+  {
+    "term": "Indicator of Compromise",
+    "abbreviation": "IOC",
+    "category": "Threat Intelligence",
+    "definition": "Observable evidence that may indicate a system or network has been affected by malicious activity.",
+    "example": "Examples include suspicious file hashes, domains, IP addresses, or unusual registry changes."
+  },
+  {
+    "term": "Tactics, Techniques, and Procedures",
+    "abbreviation": "TTPs",
+    "category": "MITRE ATT&CK",
+    "definition": "A structured way to describe an adversary's goals, methods, and repeatable patterns of behavior.",
+    "example": "Analysts map observed activity to ATT&CK techniques to communicate how an intrusion was performed."
+  },
+  {
+    "term": "Security Information and Event Management",
+    "abbreviation": "SIEM",
+    "category": "Security Operations",
+    "definition": "Technology that centralizes, searches, correlates, and alerts on security-relevant logs from multiple systems.",
+    "example": "A SOC analyst may use a SIEM to investigate repeated failed logins across several endpoints."
+  },
+  {
+    "term": "Common Vulnerabilities and Exposures",
+    "abbreviation": "CVE",
+    "category": "Vulnerability Management",
+    "definition": "A standardized identifier for a publicly disclosed cybersecurity vulnerability.",
+    "example": "A scanner finding can be researched by CVE identifier to confirm impact and remediation guidance."
+  },
+  {
+    "term": "Packet Capture",
+    "abbreviation": "PCAP",
+    "category": "Network Security",
+    "definition": "A file or process that records network packets for inspection and analysis.",
+    "example": "Wireshark can open a PCAP to examine DNS requests, TCP sessions, and suspicious connections."
+  },
+  {
+    "term": "False Positive",
+    "abbreviation": "FP",
+    "category": "Security Operations",
+    "definition": "An alert that indicates malicious activity even though the observed behavior is legitimate.",
+    "example": "The analyst validates the alert context before closing it as a false positive."
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "signal-trace",
+    "codeName": "Operation Signal Trace",
+    "title": "Network Traffic Analysis",
+    "domain": "Network Security",
+    "status": "complete",
+    "tools": ["Wireshark", "TCP/IP", "DNS"],
+    "summary": "Captured and examined network traffic in a controlled lab to identify protocols, connection behavior, and indicators requiring further investigation.",
+    "repository": "",
+    "report": ""
+  },
+  {
+    "id": "fortress",
+    "codeName": "Operation Fortress",
+    "title": "Vulnerability Assessment",
+    "domain": "Vulnerability Management",
+    "status": "in-progress",
+    "tools": ["Nmap", "Greenbone", "CVE Research"],
+    "summary": "Documenting an authenticated vulnerability assessment workflow, including discovery, validation, risk prioritization, and remediation recommendations.",
+    "repository": "",
+    "report": ""
+  },
+  {
+    "id": "nightwatch",
+    "codeName": "Operation Nightwatch",
+    "title": "Threat Detection & MITRE ATT&CK",
+    "domain": "Threat Intelligence",
+    "status": "planned",
+    "tools": ["MITRE ATT&CK", "Windows Events", "Splunk"],
+    "summary": "A developing SOC investigation that will analyze security telemetry, map observed behavior to MITRE ATT&CK, and produce an analyst report.",
+    "repository": "",
+    "report": ""
+  }
+]

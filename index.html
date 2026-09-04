@@ -1,67 +1,231 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mia Cook's interactive cybersecurity portfolio featuring SOC investigations, technical case studies, and hands-on security projects.">
+  <meta name="theme-color" content="#050a0d">
+  <title>Mia Cook | Cipher Division</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="globe.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-mode="classified">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <header class="topbar">
+    <a class="brand" href="#dashboard" aria-label="Mia Cook home">
+      <span class="brand-mark">MC</span>
+      <span class="brand-copy" data-classified="// CIPHER DIVISION" data-recruiter="| CYBERSECURITY PORTFOLIO">// CIPHER DIVISION</span>
+    </a>
 
-    <title>Mia Cook | Cybersecurity Portfolio</title>
+    <button class="mobile-menu" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
 
-    <style>
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        background: radial-gradient(circle at center, #102c42, #02070b 65%);
-        color: #f7f1df;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-      }
+    <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
+      <a href="#dashboard" data-classified="Dashboard" data-recruiter="About">Dashboard</a>
+      <a href="#missions" data-classified="Missions" data-recruiter="Projects">Missions</a>
+      <a href="#gadgets" data-classified="Field Gadgets" data-recruiter="Skills & Tools">Field Gadgets</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#vault" data-classified="Intel Vault" data-recruiter="Resource Vault">Intel Vault</a>
+    </nav>
 
-      main {
-        width: min(700px, 85%);
-        padding: 50px 30px;
-        border: 1px solid #c89b45;
-        background: rgba(3, 12, 18, 0.88);
-        box-shadow: 0 0 40px rgba(44, 165, 210, 0.18);
-      }
+    <div class="mode-switch" role="group" aria-label="Portfolio display mode">
+      <button type="button" data-set-mode="classified" aria-pressed="true">Classified</button>
+      <button type="button" data-set-mode="recruiter" aria-pressed="false">Recruiter</button>
+    </div>
+  </header>
 
-      .status {
-        color: #9fe870;
-        letter-spacing: 0.2rem;
-        text-transform: uppercase;
-      }
+  <main id="main-content">
+    <section id="dashboard" class="dashboard shell" aria-labelledby="hero-title">
+      <article class="profile-panel panel">
+        <div class="photo-frame">
+          <img src="assets/mia-cook-agent-photo.jpeg" alt="Professional portrait of Mia Cook">
+          <span class="scan-line" aria-hidden="true"></span>
+        </div>
+        <div class="profile-meta">
+          <span><b data-classified="Location" data-recruiter="Location">Location</b> Baltimore, MD</span>
+          <span><b data-classified="Status" data-recruiter="Status">Status</b> <i class="status-dot"></i> Open to opportunities</span>
+        </div>
+      </article>
 
-      h1 {
-        margin-bottom: 10px;
-        color: #d6ae5b;
-        font-size: clamp(2.5rem, 8vw, 5rem);
-      }
+      <section class="hero-copy">
+        <p class="eyebrow" data-classified="Agent profile // verified" data-recruiter="Professional profile">Agent profile // verified</p>
+        <h1 id="hero-title">Mia Cook</h1>
+        <p class="alias" data-classified="Agent MC" data-recruiter="Aspiring SOC Analyst">Agent MC</p>
+        <p class="role">Security+ Certified · Cyber Threat Hunting · Future Purple Teamer</p>
+        <p class="hero-summary" data-classified="Every alert is a clue. Every investigation is a mission." data-recruiter="Security+ certified cybersecurity professional building hands-on experience in threat detection, vulnerability management, network analysis, and incident response.">Every alert is a clue. Every investigation is a mission.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#missions" data-classified="Access mission files" data-recruiter="View technical projects">Access mission files</a>
+          <a class="button secondary disabled-link" href="#" aria-disabled="true" data-classified="Resume pending" data-recruiter="Resume coming soon">Resume pending</a>
+        </div>
+        <div class="signal" aria-label="System status">
+          <span>&gt; SYSTEM ONLINE</span>
+          <div class="signal-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </section>
 
-      h2 {
-        color: #f7f1df;
-        font-weight: normal;
-      }
+      <section class="globe-panel panel" aria-label="Animated global operations map">
+        <div class="panel-heading">
+          <span data-classified="Global operations" data-recruiter="Cybersecurity domain map">Global operations</span>
+          <small>LIVE MAP</small>
+        </div>
+        <div class="globe-wrap">
+          <canvas id="cyber-globe" aria-hidden="true"></canvas>
+          <button class="map-node node-one" type="button" data-focus="network"><span></span><b data-classified="Signal Trace" data-recruiter="Network Analysis">Signal Trace</b></button>
+          <button class="map-node node-two" type="button" data-focus="vulnerability"><span></span><b data-classified="Fortress" data-recruiter="Vulnerability Management">Fortress</b></button>
+          <button class="map-node node-three" type="button" data-focus="threat"><span></span><b data-classified="Nightwatch" data-recruiter="Threat Detection">Nightwatch</b></button>
+        </div>
+        <div class="map-legend">
+          <span><i class="blue"></i> Network</span>
+          <span><i class="green"></i> Vulnerability</span>
+          <span><i class="violet"></i> Threat intel</span>
+        </div>
+      </section>
 
-      p {
-        color: #b9c6cc;
-        line-height: 1.7;
-      }
-    </style>
-  </head>
+      <aside class="active-panel panel">
+        <div class="panel-heading"><span data-classified="Active mission" data-recruiter="Current project">Active mission</span><small>IN PROGRESS</small></div>
+        <p class="operation-label" data-classified="Operation: Nightwatch" data-recruiter="Threat Detection Lab">Operation: Nightwatch</p>
+        <p class="objective" data-classified="Objective: Detect · Analyze · Defend" data-recruiter="Objective: Analyze security events and document findings">Objective: Detect · Analyze · Defend</p>
+        <ol class="mission-steps" aria-label="Investigation workflow">
+          <li class="complete">Triage</li>
+          <li class="complete">Collect</li>
+          <li class="active">Analyze</li>
+          <li>Contain</li>
+          <li>Report</li>
+        </ol>
+        <div class="clearance">
+          <span data-classified="Clearance development" data-recruiter="Skill development">Clearance development</span>
+          <div class="progress-track"><span></span></div>
+          <small>Hands-on practice in progress</small>
+        </div>
+      </aside>
+    </section>
 
-  <body>
-    <main>
-      <div class="status">System Online</div>
+    <section id="missions" class="section shell" aria-labelledby="missions-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Portfolio evidence</p>
+          <h2 id="missions-title" data-classified="Mission dossiers" data-recruiter="Featured case studies">Mission dossiers</h2>
+        </div>
+        <button class="text-button" type="button" data-open-owner-tools data-classified="+ Draft a mission" data-recruiter="+ Add project draft">+ Draft a mission</button>
+      </div>
+      <div id="mission-grid" class="mission-grid" aria-live="polite"></div>
+    </section>
 
-      <h1>AGENT MC</h1>
+    <section id="gadgets" class="section shell split-section" aria-labelledby="gadgets-title">
+      <div class="panel toolkit-panel">
+        <div class="section-heading compact">
+          <div>
+            <p class="eyebrow">Technical capability</p>
+            <h2 id="gadgets-title" data-classified="Field gadgets" data-recruiter="Skills & tools">Field gadgets</h2>
+          </div>
+        </div>
+        <div class="tool-grid">
+          <article><span>◉</span><b data-classified="Packet Interceptor" data-recruiter="Wireshark">Packet Interceptor</b><small>Wireshark</small></article>
+          <article><span>⌁</span><b data-classified="Recon Scanner" data-recruiter="Nmap">Recon Scanner</b><small>Nmap</small></article>
+          <article><span>⬡</span><b data-classified="Vulnerability Detector" data-recruiter="Greenbone / OpenVAS">Vulnerability Detector</b><small>Greenbone</small></article>
+          <article><span>&gt;_</span><b data-classified="Field Operations System" data-recruiter="Kali Linux">Field Operations System</b><small>Kali Linux</small></article>
+          <article><span>⌖</span><b data-classified="Tactics Database" data-recruiter="MITRE ATT&CK">Tactics Database</b><small>MITRE ATT&CK</small></article>
+          <article><span>▤</span><b data-classified="Intelligence Console" data-recruiter="Splunk">Intelligence Console</b><small>Splunk</small></article>
+        </div>
+      </div>
 
-      <h2>Cyber Intelligence Portfolio</h2>
+      <aside id="credentials" class="panel credentials-panel">
+        <p class="eyebrow">Verified development</p>
+        <h2 data-classified="Clearance credentials" data-recruiter="Credentials & education">Clearance credentials</h2>
+        <div class="credential"><span>SEC+</span><div><b>CompTIA Security+</b><small>Earned September 2024</small></div></div>
+        <div class="credential"><span>CTH</span><div><b>Cyber Threat Hunting</b><small>UMGC Undergraduate Certificate</small></div></div>
+        <div class="credential"><span>BS</span><div><b>B.S. Cybersecurity Technology</b><small>University of Maryland Global Campus · In progress</small></div></div>
+      </aside>
+    </section>
 
-      <p>Every alert is a clue. Every investigation is a mission.</p>
+    <section id="vault" class="section shell" aria-labelledby="vault-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Quick-reference knowledge base</p>
+          <h2 id="vault-title" data-classified="Intel vocabulary vault" data-recruiter="Cybersecurity resource vault">Intel vocabulary vault</h2>
+        </div>
+        <button class="text-button" type="button" data-open-owner-tools data-classified="+ Add intel term" data-recruiter="+ Add vocabulary draft">+ Add intel term</button>
+      </div>
+      <div class="vault-controls">
+        <label>
+          <span class="sr-only">Search vocabulary</span>
+          <input id="vault-search" type="search" placeholder="Search terms, definitions, or categories…">
+        </label>
+        <select id="vault-category" aria-label="Filter vocabulary by category">
+          <option value="all">All categories</option>
+        </select>
+      </div>
+      <div id="vocabulary-grid" class="vocabulary-grid" aria-live="polite"></div>
+      <p id="vault-empty" class="empty-message" hidden>No matching intel found.</p>
+    </section>
 
-      <p>Full Cipher Division portfolio currently under development.</p>
-    </main>
-  </body>
+    <section id="contact" class="section shell contact-panel panel">
+      <div>
+        <p class="eyebrow" data-classified="Open channel" data-recruiter="Contact">Open channel</p>
+        <h2>Let’s connect</h2>
+        <p>Add your professional email and LinkedIn address before publishing this section.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="button secondary disabled-link" href="#" aria-disabled="true">LinkedIn placeholder</a>
+        <a class="button secondary disabled-link" href="#" aria-disabled="true">Email placeholder</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <span>© <span id="year"></span> Mia Cook</span>
+    <button type="button" class="owner-button" data-open-owner-tools>Owner Tools</button>
+  </footer>
+
+  <dialog id="owner-tools" class="owner-dialog">
+    <form method="dialog" class="dialog-header">
+      <div><p class="eyebrow">Local drafting workspace</p><h2>Owner Tools</h2></div>
+      <button class="icon-button" value="close" aria-label="Close owner tools">×</button>
+    </form>
+    <p class="owner-note"><strong>Important:</strong> Drafts remain on this browser only. Export the updated JSON file and replace the matching file inside your GitHub <code>data</code> folder to publish it.</p>
+
+    <div class="builder-layout">
+      <form id="mission-form" class="builder-form">
+        <h3>Mission Builder</h3>
+        <label>Operation codename<input name="codeName" required placeholder="Operation Ghost Login"></label>
+        <label>Professional project title<input name="title" required placeholder="Windows Authentication Investigation"></label>
+        <label>Domain<select name="domain" required><option>Network Security</option><option>Vulnerability Management</option><option>Threat Intelligence</option><option>Incident Response</option><option>System Administration</option><option>Governance, Risk & Compliance</option></select></label>
+        <label>Status<select name="status" required><option value="planned">Planned</option><option value="in-progress">In progress</option><option value="complete">Complete</option></select></label>
+        <label>Tools used<input name="tools" required placeholder="Windows Event Viewer, Sysmon, Splunk"></label>
+        <label>Summary<textarea name="summary" required rows="4" placeholder="Describe the scenario, investigation, and outcome without including sensitive information."></textarea></label>
+        <label>Mission objective<textarea name="objective" rows="3" placeholder="State what you were expected to investigate or demonstrate."></textarea></label>
+        <label>Lab environment<textarea name="environment" rows="3" placeholder="List approved systems, virtual machines, log sources, and network setup."></textarea></label>
+        <label>Investigation steps<textarea name="steps" rows="5" placeholder="Enter one investigation step per line."></textarea></label>
+        <label>Findings<textarea name="findings" rows="4" placeholder="Summarize validated observations and supporting evidence."></textarea></label>
+        <label>MITRE ATT&CK mapping<textarea name="mitre" rows="3" placeholder="Example: T1059 — Command and Scripting Interpreter"></textarea></label>
+        <label>Remediation recommendations<textarea name="remediation" rows="4" placeholder="Enter one recommendation per line."></textarea></label>
+        <label>Lessons learned<textarea name="lessons" rows="3" placeholder="What did this mission teach you?"></textarea></label>
+        <label>Repository URL<input name="repository" type="url" placeholder="https://github.com/..."></label>
+        <label>Report path or URL<input name="report" placeholder="reports/ghost-login-report.pdf"></label>
+        <button class="button primary" type="submit">Save local mission draft</button>
+        <button class="button secondary" id="export-missions" type="button">Export missions.json</button>
+        <button class="button secondary" id="export-latest-report" type="button">Export latest mission report.md</button>
+      </form>
+
+      <form id="vocabulary-form" class="builder-form">
+        <h3>Vocabulary Builder</h3>
+        <label>Term<input name="term" required placeholder="Indicator of Compromise"></label>
+        <label>Abbreviation<input name="abbreviation" placeholder="IOC"></label>
+        <label>Category<input name="category" required placeholder="Threat Intelligence"></label>
+        <label>Definition<textarea name="definition" required rows="5" placeholder="Write a clear definition in your own words."></textarea></label>
+        <label>Example or analyst note<textarea name="example" rows="4" placeholder="Explain how the term appears in a SOC investigation."></textarea></label>
+        <button class="button primary" type="submit">Save local vocabulary draft</button>
+        <button class="button secondary" id="export-vocabulary" type="button">Export vocabulary.json</button>
+      </form>
+    </div>
+
+    <div class="local-tools-footer">
+      <span id="draft-status" role="status">No changes made in this session.</span>
+      <button id="clear-local-drafts" class="danger-button" type="button">Clear browser-only drafts</button>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
 </html>
